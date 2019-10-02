@@ -1,0 +1,144 @@
+.project-section > h1 {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-top: 40px;
+    font-size: 3em;
+
+    padding: 15px 40px;
+    font-family: 'Cute Font', cursive;
+    font-size: 3.5em;
+    color: white
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    // background: yellow;
+    // border: 1px solid black;
+}
+
+.row1 {
+
+}
+
+.row2 {
+    margin-top: -80px;
+}
+
+.project {
+    width: fit-content;
+    height: fit-content;
+    // box-shadow:  0 10px 20px rgba(51, 28, 26, 0.8);
+
+    .face {
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        transition: 0.5s;        
+        box-shadow:  0 10px 20px rgba(51, 28, 26, 0.8);
+        a,p {
+            margin: 0;
+        }
+    }
+    
+    .face1 {
+        background: rgba(255, 255, 255, 0.3);
+        position: relative;
+        z-index: 1;
+        transform: translateY(100px);
+        // border: white 1px solid;
+        opacity: 0.5;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: white;
+        }
+    }
+    
+    .face2 {
+        background: white;
+        position: relative;
+        transform: translateY(-100px);  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
+        .content {
+            width: 90%;
+            padding-top: 10px;
+            // background: green;
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            a {
+                width: 100%;
+                // font-family: 'Cute Font', cursive;
+                font-size: 1.2em; 
+                display: inline-block;
+                background: lightskyblue;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                padding: 5px 0;
+                margin-top: 10px;
+
+                &:hover {
+                    background: white;
+                    color: lightskyblue;
+                    border: 1px solid lightskyblue;
+                }
+            }
+        }
+    }
+        
+    &:hover {
+        .face1, .face2 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .face1 {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .face2{
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+}
+
+.project1 {
+    .face1 {
+        background: url('/images/restaurant.jpg');
+        // opacity: 0.3;
+        background-size: cover;
+    }
+
+    .face2 {
+       
+        .content{
+            a {
+                background: rgb(175, 79, 23);
+
+                &:hover {
+                    color: rgb(175, 79, 23);
+                    border: rgb(175, 79, 23) 1px solid;
+                    background: white;
+                }
+            }
+       }
+    }
+    
+}

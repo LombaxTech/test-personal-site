@@ -1,0 +1,48 @@
+* {
+    // box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right,rgb(77, 160, 207),rgb(63, 185, 255),rgb(39, 101, 138), #2B32B2);
+    background-size: 400% 800%;
+    height: fit-content;
+    animation: change 10s ease-in-out infinite;
+}
+
+@import './header';
+@import './about-me';
+@import './projects';
+@import './contact-me';
+
+footer {
+    margin-top: 20px;
+    padding: 40px 40px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+
+    .links {
+        color: white;
+        font-size: 20px;
+        margin:0 20px;
+    }
+
+    p {
+        color: white;
+        margin: 0;
+    }
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
